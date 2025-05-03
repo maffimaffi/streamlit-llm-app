@@ -1,11 +1,9 @@
-import streamlit as st
-from dotenv import load_dotenv
 import os
+import streamlit as st
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
-
-load_dotenv()
 
 st.title("サンプルアプリ③: LLM専門家相談アプリ")
 
